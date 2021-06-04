@@ -1,0 +1,38 @@
+@use "../base/base";
+@use '../base/colors' as clr;
+
+.btn {
+  display: block;
+  padding: 1em 2.5em;
+  border-radius: 1.8125em;
+  color: clr.$color-neutral-lightest;
+  transition: all 0.2s;
+
+  &--primary {
+    background-color: clr.$color-primary;
+
+    & span {
+      color: clr.$color-primary-light;
+      margin-left: 0.25em;
+    }
+
+    &:hover,
+    &:active {
+      background-color: clr.$color-primary-lightest;
+    }
+  }
+
+  &--secondary {
+    background-color: clr.$color-secondary;
+
+    & span {
+      color: clr.$color-primary-light;
+      margin-left: 0.25em;
+    }
+
+    &:hover,
+    &:active {
+      background-color: clr.$color-secondary-lightest;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "base/base";
+@use "base/colors" as clr;
+@use "base/typography" as t;
+
+@use 'utils/mixins' as mix;
+
+@use "components/buttons" as btn;
+@use "components/gallery" as glr;
+@use "components/section-anchor";
+
+.all-in-one {
+  margin-top: 3.4375rem;
+  margin-bottom: 2.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__anchor {
+    margin-bottom: 4rem;
+  }
+
+  &__gallery {
+    margin-bottom: 5rem;
+  }
+
+  &__eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    @include mix.text-width-align(
+      31%,
+      27.8125rem,
+      center
+    ); // (width,min-width,text-align)
+
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    @include mix.text-width-align(
+      38%,
+      33.75rem,
+      center
+    ); // (width,min-width,text-align)
+  }
+}

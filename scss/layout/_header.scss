@@ -1,0 +1,51 @@
+@use "base/base";
+@use "base/colors" as clr;
+@use "base/typography" as t;
+
+@use 'utils/mixins' as mix;
+
+@use "components/buttons" as btn;
+@use "components/section-anchor";
+
+.header {
+  padding-top: 5rem;
+  padding-bottom: 3.4375rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url(../assets/desktop/image-hero-left.png),
+    url(../assets/desktop/image-hero-right.png);
+  background-repeat: no-repeat;
+  background-position: top 10.5625rem left -2rem, top 14rem right -2rem;
+
+  &__logo {
+    display: block;
+    width: 7.4375rem;
+    height: 1.75rem;
+    margin-bottom: 6.75rem;
+  }
+  &__heading {
+    @include mix.text-width-align(
+      31%,
+      27.8125rem,
+      center
+    ); // (width,min-width,text-align)
+
+    margin-bottom: 2.125rem;
+  }
+  &__paragraph {
+    @include mix.text-width-align(
+      31%,
+      27.8125rem center
+    ); // (width,min-width,text-align)
+    margin-bottom: 2rem;
+  }
+  &__buttons {
+    display: flex;
+  }
+  &__btn:last-child {
+    margin-left: 1rem;
+  }
+}

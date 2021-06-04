@@ -1,0 +1,9 @@
+/*
+This sets the text-align properties and width for headers and paragraph text
+*/
+
+@mixin text-width-align($width: 31%, $min-width: 27rem, $text-align: center) {
+  width: $width;
+  min-width: $min-width;
+  text-align: $text-align;
+}
