@@ -21,15 +21,20 @@
   background-repeat: no-repeat;
   background-position: top 10.5625rem left -2rem, top 14rem right -2rem;
 
-  @include mix.respond(desktop) {
+  @include mix.respond(lg) {
     padding-top: 3rem;
     background-position: top 8.75rem left -2rem, top 8.75rem right -2rem;
   }
 
-  @include mix.respond(tablet) {
+  @include mix.respond(med) {
     background-image: url(../assets/tablet/image-hero.png);
-    background-position: top 140px left 0px;
-    background-size: contain;
+    background-position: top 140px left -26px;
+    background-size: 107%;
+  }
+
+  @include mix.respond(sm) {
+    background-position: top 140px left -20px;
+    background-size: 110%;
   }
 
   &__logo {
@@ -38,27 +43,59 @@
     height: 1.75rem;
     margin-bottom: 6.75rem;
 
-    @include mix.respond(desktop) {
-      margin-bottom: 27.4375rem;
+    @include mix.respond(lg) {
+      margin-bottom: clamp(25rem, 60vw, 27.4375rem);
+    }
+
+    @include mix.respond(med) {
+      margin-bottom: clamp(15.9375rem, 60vw, 27.4375rem);
+    }
+
+    @include mix.respond(sm) {
+      margin-bottom: 25;
+    }
+
+    @include mix.respond(xsm) {
+      margin-bottom: 15.9375rem;
     }
   }
   &__heading {
-    @include mix.text-width-align(31%, 27.8125rem, center);
-
     margin-bottom: 2.125rem;
 
-    @include mix.respond(tablet) {
+    // (width,min-width,text-align)
+    @include mix.text-width-align(29vw);
+
+    @include mix.respond(lg) {
       margin-bottom: 1.5rem;
     }
   }
   &__paragraph {
-    @include mix.text-width-align(31%, 27.8125rem, center);
+    width: clamp(30rem, 35vw, 33rem);
+    // width: 33rem;
+    text-align: center;
     margin-bottom: 2rem;
+
+    @include mix.respond(med) {
+      width: 60vw;
+    }
+    @include mix.respond(sm) {
+      width: 20.4375rem;
+    }
   }
   &__buttons {
     display: flex;
-  }
-  &__btn:last-child {
-    margin-left: 1rem;
+
+    :last-child {
+      margin-left: 1rem;
+    }
+
+    @include mix.respond(sm) {
+      flex-direction: column;
+      align-items: center;
+
+      :last-child {
+        margin: 1rem 0 0;
+      }
+    }
   }
 }

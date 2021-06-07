@@ -2,7 +2,7 @@
 This sets the text-align properties and width for headers and paragraph text
 */
 
-@mixin text-width-align($width: 31%, $min-width: 27rem, $text-align: center) {
+@mixin text-width-align($width: 30vw, $min-width: 18rem, $text-align: center) {
   width: $width;
   min-width: $min-width;
   text-align: $text-align;
@@ -11,24 +11,38 @@ This sets the text-align properties and width for headers and paragraph text
 // MEDIA QUERY MANAGER
 
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
+  //Screen size of 375px
+  @if $breakpoint == xsm {
     @media only screen and (max-width: 23.4375em) {
       @content;
-    } //375px
+    }
   }
-  @if $breakpoint == tablet {
+
+  //Screen size of 600px
+  @if $breakpoint == sm {
+    @media only screen and (max-width: 37.5rem) {
+      @content;
+    }
+  }
+
+  //Screen size of 768px
+  @if $breakpoint == med {
     @media only screen and (max-width: 48em) {
       @content;
     } //768px
   }
-  @if $breakpoint == desktop {
+
+  //Screen size of 1200px
+  @if $breakpoint == lg {
     @media only screen and (max-width: 75rem) {
       @content;
-    } //1440px
+    } //768px
   }
-  @if $breakpoint == desktop-large {
-    @media only screen and (min-width: 112.5em) {
+
+  //Screen size of 1280px
+  @if $breakpoint == xl {
+    @media only screen and (max-width: 80em) {
       @content;
-    } //1440px
+    }
   }
 }

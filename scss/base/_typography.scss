@@ -12,13 +12,8 @@ body {
 h1 {
   font-style: normal;
   font-weight: 900;
-  font-size: 4rem;
-  line-height: 4rem;
-
-  @include mix.respond(tablet) {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: clamp(2.5rem, 4vw, 4rem);
 }
 
 h2 {
@@ -42,8 +37,11 @@ p {
   font-style: normal;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 1.625rem;
-  color: clr.$color-neutral-50;
+  line-height: 1.8rem;
+
+  font-size: clamp(1rem, 4vw, 1.125rem);
+  line-height: clamp(1.125rem, 4vw, 1.625rem);
+  color: clr.$color-neutral-300;
 }
 
 .section-anchor {

@@ -1,19 +1,31 @@
 @use 'utils/variables' as var;
+@use 'utils/mixins' as mix;
 
 .gallery {
   width: 100%;
   max-width: var.$desktop-max-width;
-  padding: 0 10.3125rem;
+
+  padding: 0 10vw;
 
   display: flex;
+  justify-content: center;
   list-style-type: none;
 
-  @media only screen and (max-width: 768px) {
-  }
-
   &__item {
+    width: 15.9375rem;
+    height: 15.125rem;
+
     &:not(:last-child) {
-      margin-right: 1.5vw;
+      margin-right: 2.09vw;
+    }
+
+    @include mix.respond(lg) {
+      width: 10.25rem;
+      height: 9.75rem;
+
+      &:not(:last-child) {
+        margin-right: 0.6875rem;
+      }
     }
 
     & img {
