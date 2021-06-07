@@ -5,34 +5,34 @@
   display: block;
   padding: 1em 2.5em;
   border-radius: 1.8125em;
-  color: clr.$color-neutral-lightest;
+  color: clr.$color-neutral-50;
   transition: all 0.2s;
 
   &--primary {
-    background-color: clr.$color-primary;
+    background-color: clr.$color-primary-500;
 
     & span {
-      color: clr.$color-primary-light;
+      color: clr.$color-primary-100;
       margin-left: 0.25em;
     }
 
     &:hover,
     &:active {
-      background-color: clr.$color-primary-lightest;
+      background-color: clr.$color-primary-50;
     }
   }
 
   &--secondary {
-    background-color: clr.$color-secondary;
+    background-color: clr.$color-secondary-500;
 
     & span {
-      color: clr.$color-primary-light;
+      color: clr.$color-primary-100;
       margin-left: 0.25em;
     }
 
     &:hover,
     &:active {
-      background-color: clr.$color-secondary-lightest;
+      background-color: clr.$color-secondary-50;
     }
   }
 }

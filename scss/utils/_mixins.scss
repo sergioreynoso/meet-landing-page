@@ -7,3 +7,28 @@ This sets the text-align properties and width for headers and paragraph text
   min-width: $min-width;
   text-align: $text-align;
 }
+
+// MEDIA QUERY MANAGER
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 23.4375em) {
+      @content;
+    } //375px
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 48em) {
+      @content;
+    } //768px
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 75rem) {
+      @content;
+    } //1440px
+  }
+  @if $breakpoint == desktop-large {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1440px
+  }
+}

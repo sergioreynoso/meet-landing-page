@@ -17,8 +17,8 @@
     Option 1 : Background IMG with opacity
     */
     background-image: linear-gradient(
-        rgba(clr.$color-primary, 0.85),
-        rgba(clr.$color-primary, 0.85)
+        rgba(clr.$color-primary-500, 0.85),
+        rgba(clr.$color-primary-500, 0.85)
       ),
       url(../assets/desktop/image-footer.jpg);
     background-repeat: no-repeat;
@@ -45,23 +45,18 @@
   }
 
   &__heading {
-    color: clr.$color-neutral-lightest;
-    @include mix.text-width-align(
-      24%,
-      21.875rem,
-      left
-    ); // (width,min-width,text-align)
+    color: clr.$color-neutral-50;
+
+    // (width,min-width,text-align)
+    @include mix.text-width-align(24%, 21.875rem, left);
   }
 
   &__paragraph {
-    color: clr.$color-neutral-lightest;
+    color: clr.$color-neutral-50;
     margin-left: 7.8125rem;
 
-    @include mix.text-width-align(
-      24%,
-      21.875rem,
-      left
-    ); // (width,min-width,text-align)
+    // (width,min-width,text-align)
+    @include mix.text-width-align(24%, 21.875rem, left);
   }
 
   &__btn {

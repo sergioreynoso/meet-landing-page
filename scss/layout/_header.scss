@@ -8,6 +8,7 @@
 @use "components/section-anchor";
 
 .header {
+  width: 100%;
   padding-top: 5rem;
   padding-bottom: 3.4375rem;
 
@@ -20,26 +21,38 @@
   background-repeat: no-repeat;
   background-position: top 10.5625rem left -2rem, top 14rem right -2rem;
 
+  @include mix.respond(desktop) {
+    padding-top: 3rem;
+    background-position: top 8.75rem left -2rem, top 8.75rem right -2rem;
+  }
+
+  @include mix.respond(tablet) {
+    background-image: url(../assets/tablet/image-hero.png);
+    background-position: top 140px left 0px;
+    background-size: contain;
+  }
+
   &__logo {
     display: block;
     width: 7.4375rem;
     height: 1.75rem;
     margin-bottom: 6.75rem;
+
+    @include mix.respond(desktop) {
+      margin-bottom: 27.4375rem;
+    }
   }
   &__heading {
-    @include mix.text-width-align(
-      31%,
-      27.8125rem,
-      center
-    ); // (width,min-width,text-align)
+    @include mix.text-width-align(31%, 27.8125rem, center);
 
     margin-bottom: 2.125rem;
+
+    @include mix.respond(tablet) {
+      margin-bottom: 1.5rem;
+    }
   }
   &__paragraph {
-    @include mix.text-width-align(
-      31%,
-      27.8125rem center
-    ); // (width,min-width,text-align)
+    @include mix.text-width-align(31%, 27.8125rem, center);
     margin-bottom: 2rem;
   }
   &__buttons {

@@ -29,20 +29,14 @@
   }
 
   &__heading {
-    @include mix.text-width-align(
-      31%,
-      27.8125rem,
-      center
-    ); // (width,min-width,text-align)
+    // (width,min-width,text-align)
+    @include mix.text-width-align(31%, 27.8125rem, center);
 
     margin-bottom: 2rem;
   }
 
   &__paragraph {
-    @include mix.text-width-align(
-      38%,
-      33.75rem,
-      center
-    ); // (width,min-width,text-align)
+    // (width,min-width,text-align)
+    @include mix.text-width-align(38%, 33.75rem, center);
   }
 }
