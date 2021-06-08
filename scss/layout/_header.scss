@@ -100,5 +100,8 @@
 
   &__btn:last-child {
     margin-left: 1rem;
+    @include mix.respond(sm) {
+      margin: 1rem 0 0;
+    }
   }
 }
