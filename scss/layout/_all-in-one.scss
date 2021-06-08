@@ -11,6 +11,10 @@
 .all-in-one {
   margin-bottom: 2.75rem;
 
+  @include mix.respond(med) {
+    margin-bottom: 2.25rem;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;

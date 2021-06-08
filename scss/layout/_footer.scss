@@ -4,14 +4,17 @@
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   &__items {
-    display: flex;
+    width: 100%;
+    padding: 7.25rem max(1.5rem, 10vw) 6.5rem;
+
+    display: grid;
+    grid-template-columns: minmax(200px, 350px) minmax(200px, 350px) max-content;
+    grid-column-gap: 5rem;
     justify-content: center;
-    padding-top: 116px;
-    padding-bottom: 104px;
+    justify-items: left;
 
     /*
     Option 1 : Background IMG with opacity
@@ -22,7 +25,7 @@
       ),
       url(../assets/desktop/image-footer.jpg);
     background-repeat: no-repeat;
-    background-position: bottom 0 left 0;
+    background-size: cover;
 
     /*
     Option 2 : Background IMG with opacity
@@ -38,6 +41,34 @@
     //   left: 0;
     //   opacity: 0.145;
     // }
+
+    @include mix.respond(lg) {
+      grid-template-columns: minmax(20.4375rem, 31.25rem);
+      grid-template-rows: repeat(3, min-content);
+      grid-row-gap: 1.5rem;
+      justify-items: center;
+
+      background-image: linear-gradient(
+          rgba(clr.$color-primary-500, 0.85),
+          rgba(clr.$color-primary-500, 0.85)
+        ),
+        url(../assets/tablet/image-footer.jpg);
+    }
+    @include mix.respond(sm) {
+      padding-top: 5.75rem;
+      padding-bottom: 4.125rem;
+
+      background-image: linear-gradient(
+          rgba(clr.$color-primary-500, 0.85),
+          rgba(clr.$color-primary-500, 0.85)
+        ),
+        url(../assets/mobile/image-footer.jpg);
+    }
+
+    @include mix.respond(xsm) {
+      padding-top: 5.75rem;
+      padding-bottom: 4.5rem;
+    }
   }
 
   &__anchor {
@@ -46,21 +77,25 @@
 
   &__heading {
     color: clr.$color-neutral-50;
-
-    // (width,min-width,text-align)
-    @include mix.text-width-align(24%, 21.875rem, left);
+    text-align: left;
+    @include mix.respond(lg) {
+      text-align: center;
+    }
   }
 
   &__paragraph {
     color: clr.$color-neutral-50;
-    margin-left: 7.8125rem;
+    text-align: left;
 
-    // (width,min-width,text-align)
-    @include mix.text-width-align(24%, 21.875rem, left);
+    @include mix.respond(lg) {
+      text-align: center;
+    }
   }
 
   &__btn {
     align-self: center;
-    margin-left: 5.75rem;
+    @include mix.respond(lg) {
+      align-self: start;
+    }
   }
 }

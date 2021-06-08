@@ -1,9 +1,7 @@
 @use "base/base";
 @use "base/colors" as clr;
 @use "base/typography" as t;
-
 @use 'utils/mixins' as mix;
-
 @use "components/buttons" as btn;
 @use "components/section-anchor";
 
@@ -66,8 +64,9 @@
   &__heading {
     margin-bottom: 2.125rem;
 
-    // (width,min-width,text-align)
-    @include mix.text-width-align(29vw);
+    width: 29vw;
+    min-width: 18rem;
+    text-align: center;
 
     @include mix.respond(lg) {
       margin-bottom: 1.5rem;
@@ -75,7 +74,6 @@
   }
   &__paragraph {
     width: clamp(30rem, 35vw, 33rem);
-    // width: 33rem;
     text-align: center;
     margin-bottom: 2rem;
 
@@ -87,13 +85,8 @@
     }
   }
   &__buttons {
-    // width: 100%;
     display: flex;
     justify-content: center;
-
-    :last-child {
-      margin-left: 1rem;
-    }
 
     @include mix.respond(sm) {
       flex-direction: column;
@@ -103,5 +96,9 @@
         margin: 1rem 0 0;
       }
     }
+  }
+
+  &__btn:last-child {
+    margin-left: 1rem;
   }
 }
