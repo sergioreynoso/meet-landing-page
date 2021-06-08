@@ -49,7 +49,7 @@ Users should be able to:
 
 I learned how to apply a color over an image using background-image with a gradient over it. I did try another way (Option 2) as a first attempt, and I decided to go with option 1 as it was the simplest of the two.
 
-# Option:1
+### Option:1
 
 ```css
 background-image: linear-gradient(
@@ -60,7 +60,7 @@ background-repeat: no-repeat;
 background-size: cover;
 ```
 
-# Option:2
+### Option:2
 
 This option required adding a pseudo element to img element. Then I had to change the z-index pseudo element to make sure it sits on top of the image.
 
