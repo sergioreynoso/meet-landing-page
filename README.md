@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/sass-bem-and-parcel-bundler-Jnwxf4H3t)
 - Live Site URL: [Live Site](https://nifty-pasteur-c33e5a.netlify.app)
 
 ## My process
