@@ -9,7 +9,6 @@
 @use "components/section-anchor";
 
 .all-in-one {
-  margin-top: 3.4375rem;
   margin-bottom: 2.75rem;
 
   display: flex;
@@ -29,14 +28,30 @@
   }
 
   &__heading {
-    // (width,min-width,text-align)
-    @include mix.text-width-align(31%, 27.8125rem, center);
-
+    width: 27.8125rem;
+    text-align: center;
     margin-bottom: 2rem;
+
+    @include mix.respond(sm) {
+      width: 20.4375rem;
+    }
   }
 
   &__paragraph {
-    // (width,min-width,text-align)
-    @include mix.text-width-align(38%, 33.75rem, center);
+    width: 33.75rem;
+    text-align: center;
+
+    @include mix.respond(med) {
+      width: 39rem;
+    }
+
+    @include mix.respond(sm) {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    @include mix.respond(xsm) {
+      width: 20.4375rem;
+    }
   }
 }

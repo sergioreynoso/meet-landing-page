@@ -4,30 +4,42 @@
 .gallery {
   width: 100%;
   max-width: var.$desktop-max-width;
-
-  padding: 0 10vw;
-
-  display: flex;
-  justify-content: center;
+  padding: 0 11.5vw;
   list-style-type: none;
 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.875rem;
+  justify-content: center;
+
+  @include mix.respond(lg) {
+    padding: 0 7vw;
+    grid-column-gap: 2vw;
+  }
+
+  @include mix.respond(med) {
+    padding: 0 2.5rem;
+    grid-column-gap: 0.6875rem;
+  }
+
+  @include mix.respond(sm) {
+    padding: 0 7vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 1.5625rem;
+    grid-column-gap: 1.5625rem;
+  }
+
+  @include mix.respond(xsm) {
+    padding: 0 1.5rem;
+    grid-template-columns: repeat(2, 9.4375rem);
+    grid-template-rows: repeat(2, 8.9375rem);
+    grid-row-gap: 1.5625rem;
+    grid-column-gap: 1.5625rem;
+  }
+
   &__item {
-    width: 15.9375rem;
-    height: 15.125rem;
-
-    &:not(:last-child) {
-      margin-right: 2.09vw;
-    }
-
-    @include mix.respond(lg) {
-      width: 10.25rem;
-      height: 9.75rem;
-
-      &:not(:last-child) {
-        margin-right: 0.6875rem;
-      }
-    }
-
+    width: 100%;
     & img {
       display: block;
       width: 100%;
