@@ -12,17 +12,22 @@
     background-color: clr.$color-primary-500;
 
     & span {
-      color: clr.$color-primary-100;
+      color: clr.$color-primary-50;
       margin-left: 0.25em;
     }
 
     &:hover,
     &:active {
-      background-color: clr.$color-primary-50;
+      background-color: clr.$color-primary-100;
+      & span {
+        color: clr.$color-primary-50;
+      }
     }
   }
 
   &--secondary {
+    padding: 1em 1.8125rem;
+
     background-color: clr.$color-secondary-500;
 
     & span {
@@ -32,7 +37,10 @@
 
     &:hover,
     &:active {
-      background-color: clr.$color-secondary-50;
+      background-color: clr.$color-secondary-100;
+      & span {
+        color: clr.$color-secondary-50;
+      }
     }
   }
 }
