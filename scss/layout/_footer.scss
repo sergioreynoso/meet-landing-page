@@ -11,7 +11,7 @@
     padding: 7.25rem max(1.5rem, 10vw) 6.5rem;
 
     display: grid;
-    grid-template-columns: minmax(200px, 350px) minmax(200px, 350px) max-content;
+    grid-template-columns: repeat(2, minmax(12.5rem, 21.875rem)) max-content;
     grid-column-gap: 5rem;
     justify-content: center;
     // justify-items: left;
