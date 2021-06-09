@@ -3,17 +3,23 @@
 
 .btn {
   display: block;
-  padding: 1em 2.5em;
+  padding: 1em 1.8125rem;
   border-radius: 1.8125em;
   color: clr.$color-neutral-50;
   transition: background-color 0.2s;
+
+  &--span {
+    padding: 1em 2.5em;
+    & span {
+      margin-left: 0.25em;
+    }
+  }
 
   &--primary {
     background-color: clr.$color-primary-500;
 
     & span {
       color: clr.$color-primary-50;
-      margin-left: 0.25em;
     }
 
     &:hover,
@@ -26,13 +32,10 @@
   }
 
   &--secondary {
-    padding: 1em 1.8125rem;
-
     background-color: clr.$color-secondary-500;
 
     & span {
       color: clr.$color-secondary-50;
-      margin-left: 0.25em;
     }
 
     &:hover,

@@ -14,7 +14,8 @@
     grid-template-columns: minmax(200px, 350px) minmax(200px, 350px) max-content;
     grid-column-gap: 5rem;
     justify-content: center;
-    justify-items: left;
+    // justify-items: left;
+    align-items: center;
 
     /*
     Option 1 : Background IMG with opacity
@@ -93,7 +94,6 @@
   }
 
   &__btn {
-    align-self: center;
     @include mix.respond(lg) {
       align-self: start;
     }
